@@ -1,9 +1,23 @@
 const User = require('../models/user');
+const { producer } = require('../kafka/kafkaProducer');
 
-exports.createUser = (req, res) => {
-    User.create(req.body)
-        .then(user => res.status(201).json(user))
-        .catch(err => res.status(400).json(err));
+exports.createUser = async (req, res) => {
+    try {
+        // Logic to create a new user
+        const newUser = await User.create(req.body);
+
+        // Once the user is created, send a message to Kafka
+        await producer.send({
+            topic: 'user-activity',
+            messages: [{ value: JSON.stringify({ userId: newUser.id, action: 'signup' }) }],
+        });
+
+        // Send response back to client
+        res.status(201).json(newUser);
+    } catch (err) {
+        // Handle errors
+        res.status(400).json(err);
+    }
 };
 
 exports.getUserById = (req, res) => {

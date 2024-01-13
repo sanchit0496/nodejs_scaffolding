@@ -1,5 +1,6 @@
 const app = require('./app');
 const sequelize = require('./config/database');
+const { connectKafkaProducer } = require('./kafka/kafkaProducer');
 
 const PORT = process.env.PORT || 3000;
 
@@ -15,3 +16,6 @@ sequelize.sync({ alter: true }) // This will check what is the current state of 
     .catch((err) => {
         console.error('Error syncing database:', err);
     });
+
+// Connect to Kafka when starting the service
+connectKafkaProducer().catch(console.error);
