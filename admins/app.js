@@ -1,12 +1,19 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-
-const adminRoutes = require('./routes/adminRoutes');
+const adminRoutes = require("./routes/adminRoutes");
+const logger = require("./logger"); // Make sure the path is correct
 
 app.use(express.json()); // For parsing application/json
 
-// Use the user routes for any requests to '/users'
-app.use('/admin', adminRoutes);
+// Logger middleware to log each incoming request
+app.use((req, res, next) => {
+  // Log the request method and URL
+  logger.info(`Incoming request: ${req.method} ${req.url} ${req.body}`);
+  next();
+});
+
+// Use the admin routes for any requests to '/admin'
+app.use("/admin", adminRoutes);
 
 // Export the app for use in index.js
 module.exports = app;
