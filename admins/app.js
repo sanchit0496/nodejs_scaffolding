@@ -8,7 +8,7 @@ app.use(express.json()); // For parsing application/json
 // Logger middleware to log each incoming request
 app.use((req, res, next) => {
   // Log the request method and URL
-  logger.info(`Incoming request: ${req.method} ${req.url} ${req.body}`);
+  logger.info(`Incoming request: ${req.method} ${req.url} Body: ${JSON.stringify(req.body)}`);
   next();
 });
 

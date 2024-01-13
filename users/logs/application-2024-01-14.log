@@ -1,1 +1,4 @@
 2024-01-14 02:14:01 info: Incoming request: POST /users/ [object Object]
+2024-01-14 02:16:04 info: Incoming request: POST /users/ Body: {"name":"Hello There","email":"hello.there@example.com"}
+2024-01-14 02:17:12 info: Incoming request: POST /users/ Body: {"name":"Hello There","email":"hello.there@example.com"} Response: undefined
+2024-01-14 02:20:16 info: Response: POST / Body: {"id":7,"name":"Hello There","email":"hello.there@example.com","updatedAt":"2024-01-13T20:50:16.914Z","createdAt":"2024-01-13T20:50:16.914Z"}
