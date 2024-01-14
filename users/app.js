@@ -5,9 +5,7 @@ const userRoutes = require('./routes/userRoutes');
 
 app.use(express.json()); // For parsing application/json
 
-app.use((req, res, next) => {
-    const oldSend = res.send;
-    
+app.use((req, res, next) => {    
     // Log the request method and URL
     logger.info(`Incoming request: ${req.method} ${req.url} Body: ${JSON.stringify(req.body)}`);
     next();

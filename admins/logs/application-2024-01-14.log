@@ -2,3 +2,25 @@
 2024-01-14 02:10:04 info: Incoming request: GET /admin/ Sun Jan 14 2024 02:10:04 GMT+0530 (India Standard Time)
 2024-01-14 02:10:45 info: Incoming request: GET /admin/ [object Object]
 2024-01-14 02:11:22 info: Incoming request: GET /admin/ [object Object]
+2024-01-14 12:51:45 info: Incoming request: GET /uses/2 Body: {}
+2024-01-14 12:51:59 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 12:51:59 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 12:52:16 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 12:52:49 info: Incoming request: GET /users Body: {}
+2024-01-14 12:52:57 info: Incoming request: GET /users Body: {}
+2024-01-14 13:52:09 info: Incoming request: POST /admin/ Body: {"name":"admin","email":"hello@gmail.com","age":20}
+2024-01-14 13:53:06 info: Incoming request: GET /admin/1 Body: {}
+2024-01-14 13:53:09 info: Incoming request: GET /admin/1 Body: {}
+2024-01-14 13:54:25 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","age":20,"createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 13:54:34 info: Incoming request: GET /admin/1 Body: {}
+2024-01-14 13:58:56 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","age":20,"createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 13:59:24 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","age":20,"createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 13:59:31 info: Incoming request: GET /admin/1 Body: {}
+2024-01-14 13:59:37 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","age":20,"createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 14:00:16 info: Incoming request: GET /admin/1 Body: {}
+2024-01-14 14:00:19 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","age":20,"createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 14:14:25 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 14:15:14 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 14:18:44 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
+2024-01-14 14:18:53 info: Incoming request: GET /admin/1 Body: {}
+2024-01-14 14:18:57 info: Incoming request: GET /admin/1 Body: {}
