@@ -25,6 +25,10 @@ Before running this application, ensure you have the following installed:
 - Redis
 
 ## How To Install and Run Kafka 
+
+-**Download Kafka:** https://downloads.apache.org/kafka/3.6.1/kafka_2.12-3.6.1.tgz
+-**Download Zookeeper:** https://www.apache.org/dyn/closer.lua/zookeeper/zookeeper-3.8.3/apache-zookeeper-3.8.3-bin.tar.gz 
+
 zookeeper-server-start.bat ..\..\config\zookeeper.properties
 
 kafka-server-start.bat ..\..\config\server.properties
@@ -36,6 +40,9 @@ kafka-console-producer.bat --broker-list localhost:9092 --topic my-topic
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic my-topic --from-beginning
 
 ## How to Install and Run Redis
+
+-**Download Redis:** https://github.com/redis/redis/archive/7.2.4.tar.gz
+
 wsl --install
 
 wsl -l -v
