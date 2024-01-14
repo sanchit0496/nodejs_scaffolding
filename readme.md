@@ -12,6 +12,7 @@ This repository contains a Node.js application implementing a microservice archi
 - **MySQL**: Used for data persistence.
 - **Swagger**: Used for documenting APIs on server.
 - **JOI**: Used for validating incoming requests APIs on server.
+- **PM2**: Widely-used process manager for Node.js applications, known for its ability to keep applications alive indefinitely, reload them without any hurdle.
 - **Nodemon**: Utility that monitors for any changes in your source and automatically restarts your server.
 
 ### Prerequisites
