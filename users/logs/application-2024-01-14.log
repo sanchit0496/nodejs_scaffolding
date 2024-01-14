@@ -2,3 +2,25 @@
 2024-01-14 02:16:04 info: Incoming request: POST /users/ Body: {"name":"Hello There","email":"hello.there@example.com"}
 2024-01-14 02:17:12 info: Incoming request: POST /users/ Body: {"name":"Hello There","email":"hello.there@example.com"} Response: undefined
 2024-01-14 02:20:16 info: Response: POST / Body: {"id":7,"name":"Hello There","email":"hello.there@example.com","updatedAt":"2024-01-13T20:50:16.914Z","createdAt":"2024-01-13T20:50:16.914Z"}
+2024-01-14 12:53:48 info: Incoming request: GET /users Body: {}
+2024-01-14 12:53:56 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 12:57:18 info: Incoming request: GET /users Body: {}
+2024-01-14 12:57:23 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 12:57:50 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 12:59:13 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:00:32 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:00:45 info: Incoming request: GET /users/user/2 Body: {}
+2024-01-14 13:05:11 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:06:18 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:08:23 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:10:30 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:10:34 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:10:36 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:10:36 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:11:20 info: Incoming request: GET /users/2 Body: {}
+2024-01-14 13:11:29 info: Incoming request: GET /users/4 Body: {}
+2024-01-14 13:11:38 info: Incoming request: GET /users/1 Body: {}
+2024-01-14 13:11:40 info: Incoming request: GET /users/1 Body: {}
+2024-01-14 13:11:41 info: Incoming request: GET /users/1 Body: {}
+2024-01-14 13:11:42 info: Incoming request: GET /users/1 Body: {}
+2024-01-14 13:11:43 info: Incoming request: GET /users/1 Body: {}

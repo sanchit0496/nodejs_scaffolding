@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const { producer } = require('../kafka/kafkaProducer');
+const redisClient = require('../redisClient')
 
 exports.createUser = async (req, res) => {
     try {
@@ -20,13 +21,37 @@ exports.createUser = async (req, res) => {
     }
 };
 
-exports.getUserById = (req, res) => {
-    User.findByPk(req.params.id)
-        .then(user => {
-            if (user) res.json(user);
-            else res.status(404).json({ message: 'User not found' });
-        })
-        .catch(err => res.status(400).json(err));
+exports.getUserById = async (req, res) => {
+    const userId = req.params.id;
+    const cacheKey = `user:${userId}`;
+
+    try {
+        // Try to get the user data from Redis first
+        const cachedUser = await redisClient.get(cacheKey);
+
+        if (cachedUser) {
+            // If cached data exists, send it as response
+            console.log('from cache')
+            return res.json(JSON.parse(cachedUser));
+        }
+
+        // If not in cache, fetch from database
+        const user = await User.findByPk(userId);
+        if (user) {
+            console.log('from other')
+            // Cache the retrieved user data
+            await redisClient.setex(cacheKey, 3600, JSON.stringify(user)); // Cache for 1 hour
+            return res.json(user);
+        } else {
+            // User not found, send a 404 response
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+    } catch (error) {
+        // Handle any errors here
+        console.error('Error fetching user:', error);
+        return res.status(500).json({ message: 'Internal Server Error' });
+    }
 };
 
 exports.updateUser = (req, res) => {
