@@ -1,4 +1,4 @@
-##How To Install and Run Kafka 
+## How To Install and Run Kafka 
 zookeeper-server-start.bat ..\..\config\zookeeper.properties
 
 kafka-server-start.bat ..\..\config\server.properties
@@ -9,7 +9,7 @@ kafka-console-producer.bat --broker-list localhost:9092 --topic my-topic
 
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic my-topic --from-beginning
 
-##How to Install and Run Redis
+## How to Install and Run Redis
 wsl --install
 
 wsl -l -v
