@@ -11,6 +11,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use((req, res, next) => {    
     // Log the request method and URL
+    console.log('called')
     logger.info(`Incoming request: ${req.method} ${req.url} Body: ${JSON.stringify(req.body)}`);
     next();
 });

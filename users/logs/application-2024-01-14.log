@@ -29,3 +29,9 @@
 2024-01-14 13:27:06 info: Incoming request: PUT /users Body: {"id":5,"name":"Advik Raj","email":"john.doe@example.com","createdAt":"2024-01-13T18:12:27.000Z","updatedAt":"2024-01-13T18:12:27.000Z"}
 2024-01-14 13:30:07 info: Incoming request: PUT /users/5 Body: {"id":5,"name":"Advik Raj","email":"john.doe@example.com","createdAt":"2024-01-13T18:12:27.000Z","updatedAt":"2024-01-13T18:12:27.000Z"}
 2024-01-14 13:31:37 info: Incoming request: GET /users/5 Body: {}
+2024-01-14 15:37:13 info: Incoming request: POST /users/ Body: {"name":"Hello There","email":12}
+2024-01-14 15:37:17 info: Incoming request: POST /users/ Body: {"name":"Hello There","email":"hello.there@example.com"}
+2024-01-14 15:37:38 info: Incoming request: POST /users/ Body: {"name":"Hello There","email":"hello.there@example.com"}
+2024-01-14 15:38:06 info: Incoming request: GET /users/5 Body: {}
+2024-01-14 15:38:09 info: Incoming request: GET /users/5 Body: {}
+2024-01-14 15:38:34 info: Incoming request: GET /users/5 Body: {}
