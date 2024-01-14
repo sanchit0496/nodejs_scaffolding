@@ -54,16 +54,30 @@ exports.getUserById = async (req, res) => {
     }
 };
 
-exports.updateUser = (req, res) => {
-    User.update(req.body
-, {
-where: { id: req.params.id }
-})
-.then(() => {
-res.status(200).json({ message: 'User updated successfully' });
-})
-.catch(err => res.status(400).json(err));
+
+exports.updateUser = async (req, res) => {
+    const userId = req.params.id;
+    const cacheKey = `user:${userId}`;
+
+    try {
+        const [updated] = await User.update(req.body, { where: { id: userId } });
+        if (updated) {
+            // Fetch the updated user data
+            const updatedUser = await User.findByPk(userId);
+
+            // Update the cache with the new user data
+            await redisClient.setex(cacheKey, 3600, JSON.stringify(updatedUser)); // Cache for 1 hour
+
+            res.status(200).json({ message: 'User updated successfully' });
+        } else {
+            res.status(404).json({ message: 'User not found' });
+        }
+    } catch (error) {
+        console.error('Error updating user:', error);
+        res.status(400).json(error);
+    }
 };
+
 
 exports.deleteUser = (req, res) => {
 User.destroy({
