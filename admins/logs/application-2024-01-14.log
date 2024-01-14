@@ -24,3 +24,17 @@
 2024-01-14 14:18:44 info: Incoming request: PUT /admin/1 Body: {"id":1,"name":"admin account","email":"hello@gmail.com","createdAt":"2024-01-14T08:22:09.000Z","updatedAt":"2024-01-14T08:22:09.000Z"}
 2024-01-14 14:18:53 info: Incoming request: GET /admin/1 Body: {}
 2024-01-14 14:18:57 info: Incoming request: GET /admin/1 Body: {}
+2024-01-14 14:53:37 info: Incoming request: GET /api-docs Body: {}
+2024-01-14 14:53:37 info: Incoming request: GET /api-docs/ Body: {}
+2024-01-14 14:53:37 info: Incoming request: GET /api-docs/swagger-ui.css Body: {}
+2024-01-14 14:53:37 info: Incoming request: GET /api-docs/swagger-ui-bundle.js Body: {}
+2024-01-14 14:53:37 info: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js Body: {}
+2024-01-14 14:53:37 info: Incoming request: GET /api-docs/swagger-ui-init.js Body: {}
+2024-01-14 14:53:37 info: Incoming request: GET /api-docs/favicon-32x32.png Body: {}
+2024-01-14 15:21:31 info: Incoming request: GET /api-docs/swagger-ui.css Body: {}
+2024-01-14 15:21:31 info: Incoming request: GET /api-docs/swagger-ui-bundle.js Body: {}
+2024-01-14 15:21:31 info: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js Body: {}
+2024-01-14 15:21:31 info: Incoming request: GET /api-docs/swagger-ui-init.js Body: {}
+2024-01-14 15:24:35 info: Incoming request: POST /admin/ Body: {"name":"admin","email":"hello@gmail.com","age":20}
+2024-01-14 15:24:48 info: Incoming request: POST /admin/ Body: {"name":12,"email":"hello@gmail.com"}
+2024-01-14 15:24:54 info: Incoming request: POST /admin/ Body: {"name":"string","email":"hello@gmail.com"}

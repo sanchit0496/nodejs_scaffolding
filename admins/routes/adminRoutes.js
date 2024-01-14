@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const adminController = require('../controllers/adminController');
+const { createAdminSchema } = require('../validations/adminValidation');
 
 
 /**
@@ -32,8 +33,17 @@ const adminController = require('../controllers/adminController');
  *         email: john.doe@example.com
  */
 
+// Middleware for validation
+const validateAdminCreation = (req, res, next) => {
+    const { error } = createAdminSchema.validate(req.body);
+    if (error) {
+      return res.status(400).json({ message: error.details[0].message });
+    }
+    next();
+};
+
 // Define the CRUD routes for users
-router.post('/', adminController.createAdmin);
+router.post('/', validateAdminCreation, adminController.createAdmin);
 router.get('/:id', adminController.getAdminById);
 router.put('/:id', adminController.updateAdmin);
 router.delete('/:id', adminController.deleteAdmin);
