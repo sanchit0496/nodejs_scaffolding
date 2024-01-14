@@ -1,6 +1,6 @@
 # Node.js Microservice Architecture
 
-This repository contains a Node.js application implementing a microservice architecture with Sequelize ORM, Apache Kafka for Messaging, Redis for Caching, Swagger for Documentation, and Winston for Logging. The application is structured as a scaffolding to kickstart Node.js-based microservice projects.
+This repository contains a Node.js application implementing a microservice architecture with Sequelize ORM, Apache Kafka for Messaging, Redis for Caching, Swagger for Documentation, JOI for Validation, and Winston for Logging. The application is structured as a scaffolding to kickstart Node.js-based microservice projects.
 
 ## Features
 
@@ -11,6 +11,7 @@ This repository contains a Node.js application implementing a microservice archi
 - **Sequelize**: Promise-based Node.js ORM for MySQL.
 - **MySQL**: Used for data persistence.
 - **Swagger**: Used for documenting APIs on server.
+- **JOI**: Used for validating incoming requests APIs on server.
 - **Nodemon**: Utility that monitors for any changes in your source and automatically restarts your server.
 
 ### Prerequisites
